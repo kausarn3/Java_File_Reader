@@ -1,7 +1,7 @@
 package demo;
+//Downlaod following jar files from poi apache.
 
 import java.io.FileInputStream;
-
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
@@ -12,6 +12,7 @@ class doc_reader{
 			
 			public static void main(String[] args) {
 			 try {
+				 //Specify file path.
 				   FileInputStream file = new FileInputStream("D://lecture//eclipse//test.docx");
 				   XWPFDocument xdoc = new XWPFDocument(OPCPackage.open(file));
 				   XWPFWordExtractor extractor = new XWPFWordExtractor(xdoc);
